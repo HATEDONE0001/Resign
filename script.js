@@ -6,17 +6,37 @@ document.addEventListener("DOMContentLoaded", function() {
         const loginContainer = document.getElementById("login-container");
         const blogContent = document.getElementById("blog-content");
 
-        if (passcode === "1234") { // Change this to your desired passcode
-            loginContainer.style.display = "none";
-            blogContent.style.display = "block";
+        if (passcode === "1234") { // Your passcode
+            loginContainer.classList.add("glitch");
+            setTimeout(() => {
+                loginContainer.style.display = "none";
+                blogContent.style.display = "block";
+                loginContainer.classList.remove("glitch");
+            }, 300);
             errorMessage.style.display = "none";
         } else {
-            errorMessage.textContent = "Wrong passcode!";
+            errorMessage.textContent = "Access Denied!";
             errorMessage.style.display = "block";
         }
     };
 
-    // Back to Top button functionality
+    // Hamburger menu toggle
+    window.toggleMenu = function() {
+        const menu = document.getElementById("menu");
+        const hamburger = document.querySelector(".hamburger");
+        menu.classList.toggle("active");
+        hamburger.classList.toggle("active");
+    };
+
+    // Show section
+    window.showSection = function(sectionId) {
+        const sections = document.querySelectorAll(".section");
+        sections.forEach(section => section.classList.remove("active"));
+        document.getElementById(sectionId).classList.add("active");
+        toggleMenu(); // Close menu after selection
+    };
+
+    // Back to Top button
     window.onscroll = function() {
         let button = document.getElementById("back-to-top");
         if (button) {

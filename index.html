@@ -3,38 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Blog</title>
+    <title>Futuristic Blog</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="futuristic-overlay"></div>
     <div id="login-container">
-        <h2>Enter Passcode</h2>
-        <input type="password" id="passcode" placeholder="Type passcode" required>
+        <h2>Access the Grid</h2>
+        <input type="password" id="passcode" placeholder="Enter Passcode" required>
         <button onclick="checkPasscode()">Unlock</button>
         <p id="error-message" class="error"></p>
     </div>
 
     <div id="blog-content" style="display: none;">
         <header>
-            <h1>My Blog</h1>
-            <p>Welcome to my thoughts and ideas</p>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <h1>Futuristic Blog</h1>
+            <p>Transmissions from the Cyber Frontier</p>
         </header>
-        <main>
-            <article>
-                <h2>First Post: Getting Started</h2>
-                <p class="date">Posted on February 21, 2025</p>
-                <p>This is my first blog post! I’m excited to share my journey as I learn to code and build things. Today, I made this blog with help from Grok. Stay tuned for more!</p>
-            </article>
-            <article>
-                <h2>Second Post: Ideas for the Future</h2>
-                <p class="date">Posted on February 20, 2025</p>
-                <p>I’m thinking about adding more features to this blog, like a comment section or a dark mode toggle. What do you think? For now, it’s just a simple static site.</p>
-            </article>
-        </main>
+        <nav id="menu" class="menu">
+            <ul>
+                <li><a href="#" onclick="showSection('home')">Home</a></li>
+                <li><a href="#" onclick="showSection('journey')">Journey</a></li>
+                <li><a href="#" onclick="showSection('achievements')">Achievements</a></li>
+            </ul>
+        </nav>
+
+        <div id="home" class="section active">
+            <main>
+                <article>
+                    <h2>First Transmission: Activation</h2>
+                    <p class="date">Logged: February 21, 2025</p>
+                    <p>System online! I’m broadcasting my journey through the digital cosmos. This node was activated with assistance from Grok. Expect more signals soon.</p>
+                </article>
+                <article>
+                    <h2>Second Transmission: Future Protocols</h2>
+                    <p class="date">Logged: February 20, 2025</p>
+                    <p>Upgrades in progress: potential enhancements include neural comment links and a dark matter mode. For now, this is a static data stream.</p>
+                </article>
+            </main>
+        </div>
+
+        <div id="journey" class="section">
+            <main>
+                <article>
+                    <h2>Journey Log: Code Initiation</h2>
+                    <p class="date">Logged: January 2025</p>
+                    <p>Began my voyage into the codeverse. Mastered the basics of HTML and CSS—first steps toward digital transcendence.</p>
+                </article>
+                <article>
+                    <h2>Journey Log: JavaScript Nexus</h2>
+                    <p class="date">Logged: February 2025</p>
+                    <p>Connected to the JavaScript grid. Animated my first elements—time bends differently here.</p>
+                </article>
+            </main>
+        </div>
+
+        <div id="achievements" class="section">
+            <main>
+                <article>
+                    <h2>Achievement Unlocked: First Site</h2>
+                    <p class="date">Awarded: February 21, 2025</p>
+                    <p>Deployed my first static site to the GitHub Nebula. A milestone in the cyber frontier.</p>
+                </article>
+            </main>
+        </div>
+
         <footer>
-            <p>© 2025 CESAR . Hosted on <a href="https://github.com/[your-username]">GitHub</a>.</p>
+            <p>© 2025 [Your Name]. Archived on <a href="https://github.com/[your-username]">GitHub Grid</a>.</p>
         </footer>
-        <button id="back-to-top" onclick="scrollToTop()">Back to Top</button>
+        <button id="back-to-top" onclick="scrollToTop()">Return to Origin</button>
     </div>
 
     <script src="script.js"></script>

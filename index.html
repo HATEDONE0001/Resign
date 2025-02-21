@@ -1,84 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SKILL DURING JEE</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="futuristic-overlay"></div>
-    <div id="login-container">
-        <h2>Access the Grid</h2>
-        <input type="password" id="passcode" placeholder="Enter Passcode" required>
-        <button onclick="checkPasscode()">Unlock</button>
-        <p id="error-message" class="error"></p>
-    </div>
 
-    <div id="blog-content" style="display: none;">
-        <div class="dash-column" onclick="toggleDash()">
-            <div class="dash"></div>
-            <div class="dash"></div>
-            <div class="dash"></div>
-            <div class="dash-options">
-                <button onclick="showSection('home')">Home</button>
-                <button onclick="showSection('journey')">Journey</button>
-                <button onclick="showSection('achievements')">Achievements</button>
+    <link rel="stylesheet" href="style.css">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>        <!--https://boxicons.com/ -->
+
+    <title>Login & Register Page  ->> Code With Patel</title>
+</head>
+
+<body>
+
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form>
+                <h1>Create Account</h1>
+                <div class="social-icons">
+                    <a href="#" class="icons"><i class='bx bxl-google'></i></a>
+                    <a href="#" class="icons"><i class='bx bxl-facebook'></i></a>
+                    <a href="#" class="icons"><i class='bx bxl-github'></i></a>
+                    <a href="#" class="icons"><i class='bx bxl-linkedin'></i></a>
+                </div>
+                <span>Register with E-mail</span>
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Enter E-mail">
+                <input type="password" placeholder="Enter Password">
+                <button>Sign Up</button>
+            </form>
+        </div>
+
+
+        <div class="form-container sign-in">
+            <form>
+                <h1>Sign In</h1>
+                <div class="social-icons">
+                    <a href="#" class="icons"><i class='bx bxl-google'></i></a>
+                    <a href="#" class="icons"><i class='bx bxl-facebook'></i></a>
+                    <a href="#" class="icons"><i class='bx bxl-github'></i></a>
+                    <a href="#" class="icons"><i class='bx bxl-linkedin'></i></a>
+                </div>
+                <span>Login With Email & Password</span>
+                <input type="email" placeholder="Enter E-mail">
+                <input type="password" placeholder="Enter Password">
+                <a href="#">Forget Password?</a>
+                <button>Sign In</button>
+            </form>
+        </div>
+
+
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Welcome To <br>Code with Patel</h1>
+                    <p>Sign in With ID & Passowrd</p>
+                    <button class="hidden" id="login">Sign In</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Hii Coder's</h1>
+                    <p>Join "Code With Patel" to Improve Your Coding Skills</p>
+                    <button class="hidden" id="register">Sign Up</button>
+                </div>
             </div>
         </div>
-
-        <header>
-            <h1>BLOG</h1>
-            <p>START OF THE JOURNEY</p>
-        </header>
-
-        <div id="home" class="section active">
-            <main>
-                <article>
-                    <h2>CLASS 11TH</h2>
-                    <p class="date">Logged: February 23, 2025</p>
-                    <p>System online! I’m broadcasting my journey through the digital cosmos. This node was activated with assistance from Grok. Expect more signals soon.</p>
-                </article>
-                <article>
-                    <h2>Second Transmission: Future Protocols</h2>
-                    <p class="date">Logged: February 20, 2025</p>
-                    <p>Upgrades in progress: potential enhancements include neural comment links and a dark matter mode. For now, this is a static data stream.</p>
-                </article>
-            </main>
-        </div>
-
-        <div id="journey" class="section">
-            <main>
-                <article>
-                    <h2>Journey Log: Code Initiation</h2>
-                    <p class="date">Logged: January 2025</p>
-                    <p>Began my voyage into the codeverse. Mastered the basics of HTML and CSS—first steps toward digital transcendence.</p>
-                </article>
-                <article>
-                    <h2>Journey Log: JavaScript Nexus</h2>
-                    <p class="date">Logged: February 2025</p>
-                    <p>Connected to the JavaScript grid. Animated my first elements—time bends differently here.</p>
-                </article>
-            </main>
-        </div>
-
-        <div id="achievements" class="section">
-            <main>
-                <article>
-                    <h2>Achievement Unlocked: First Site</h2>
-                    <p class="date">Awarded: February 21, 2025</p>
-                    <p>Deployed my first static site to the GitHub Nebula. A milestone in the cyber frontier.</p>
-                </article>
-            </main>
-        </div>
-
-        <footer>
-            <p>© 2025 [Your Name]. Archived on <a href="https://github.com/[your-username]">GitHub Grid</a>.</p>
-        </footer>
-        <button id="back-to-top" onclick="scrollToTop()">Return to Origin</button>
     </div>
 
     <script src="script.js"></script>
 </body>
+
 </html>

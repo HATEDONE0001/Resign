@@ -17,22 +17,21 @@
     </div>
 
     <div id="blog-content" style="display: none;">
-        <header>
-            <div class="hamburger" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
+        <div class="dash-column" onclick="toggleDash()">
+            <div class="dash"></div>
+            <div class="dash"></div>
+            <div class="dash"></div>
+            <div class="dash-options">
+                <button onclick="showSection('home')">Home</button>
+                <button onclick="showSection('journey')">Journey</button>
+                <button onclick="showSection('achievements')">Achievements</button>
             </div>
+        </div>
+
+        <header>
             <h1>Futuristic Blog</h1>
             <p>Transmissions from the Cyber Frontier</p>
         </header>
-        <nav id="menu" class="menu">
-            <ul>
-                <li><a href="#" onclick="showSection('home')">Home</a></li>
-                <li><a href="#" onclick="showSection('journey')">Journey</a></li>
-                <li><a href="#" onclick="showSection('achievements')">Achievements</a></li>
-            </ul>
-        </nav>
 
         <div id="home" class="section active">
             <main>
